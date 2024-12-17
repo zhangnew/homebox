@@ -23,8 +23,7 @@ build: build-web build-server
 build-arch:
 	rustup target add $(TARGET)
 	rustup toolchain install stable-$(TARGET)
-	export CC_aarch64_unknown_linux_musl=aarch64-linux-musl-gcc
-	export CARGO_TARGET_AARCH64_UNKNOWN_LINUX_MUSL_LINKER=aarch64-linux-musl-gcc
+	which aarch64-linux-musl-gcc
 	cd server && HOMEBOX_ENV=production cargo build --locked --release --target $(TARGET)
 	mkdir -p build/arch
 	cp server/target/$(TARGET)/release/homebox build/arch/homebox-$(FILE)
