@@ -64,7 +64,7 @@ jobs:
           - runner: ubuntu-latest
             target: aarch64-unknown-linux-musl
             file: linux-arm64-musl
-            tool: musl-tools
+            tool: aarch64-linux-musl-gcc musl-tools
           - runner: ubuntu-latest
             target: i686-unknown-linux-gnu
             file: linux-386
