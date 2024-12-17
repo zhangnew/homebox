@@ -55,7 +55,7 @@ jobs:
           - runner: ubuntu-latest
             target: aarch64-unknown-linux-musl
             file: linux-arm64-musl
-            tool: musl-tools clang llvm
+            tool: musl-tools clang llvm gcc-multilib
     env:
       CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER: aarch64-linux-gnu-gcc
       CC_aarch64_unknown_linux_musl: clang
